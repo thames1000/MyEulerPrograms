@@ -13,9 +13,11 @@
 ##############################################################################
 
 def list_fibonacci_numbers(maximum):
-    fib_numbers = [1, 2]
-    total = 2
-    while True:
+    # creates a list of fibonacci numbers below variable 'maximum'
+    # keeps track of a total by adding numbers that are even
+    fib_numbers = [1, 2]   # starting fibonacci numbers
+    total = 2              # starting total (accounting for the 2)
+    while True:            # runs until code stops it from working
         high_num = fib_numbers[-1] + fib_numbers[-2]
         if (high_num <= maximum):
             fib_numbers.append(high_num)
