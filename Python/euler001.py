@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #############################################################################
 # Program by: James Lambert                                                 #
-# Date Updated: 20220413                                                    #
+# Date Updated: 20220419                                                    #
 #############################################################################
 # Euler Problem 1 in Python                                                 #
 # Multiples of 3 or 5                                                       #
