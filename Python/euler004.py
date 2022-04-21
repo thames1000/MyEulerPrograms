@@ -8,23 +8,20 @@
 #                                                                            #
 # Find the largest palindrome made from the product of two 3-digit numbers.  #
 ##############################################################################
-
-def palindrome_check(string_value):
-    # checks a string to see if it is a palindrome
-    if string_value == string_value[::-1]:
-        return True
-    return False
+import functions
 
 
 def determine_max_palindrome(minimum, maximum):
-    # creates a list of palindrome numbers from products of numbers
-    # starting at the maximum, counting down until it finds a palindrome
-    # multiplying by a seperate count down, starting at maximum
+    """
+    creates a list of palindrome numbers from products of numbers
+    starting at the maximum, counting down until it finds a palindrome
+    multiplying by a seperate count down, starting at maximum
+    """
     numbers = []
     for first_num in range(maximum, minimum, -1):
         for second_num in range(maximum, minimum, -1):
             result = first_num * second_num
-            if palindrome_check(str(result)):
+            if functions.palindrome_check(str(result)):
                 # if product is a palidrome does not need to continue counting
                 # Any further number will be smaller than highest palindrome
                 numbers.append(result)
@@ -32,4 +29,9 @@ def determine_max_palindrome(minimum, maximum):
     return max(numbers)
 
 
-print(determine_max_palindrome(100, 999))
+def main():
+    print(determine_max_palindrome(100, 999))
+
+
+if __name__ == "__main__":
+    main()

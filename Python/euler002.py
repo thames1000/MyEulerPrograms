@@ -11,22 +11,17 @@
 # By considering the terms in the Fibonacci sequence whose values do not     #
 # exceed four million, find the sum of the even-valued terms.                #
 ##############################################################################
-
-def list_fibonacci_numbers(maximum):
-    # creates a list of fibonacci numbers below variable 'maximum'
-    # keeps track of a total by adding numbers that are even
-    fib_numbers = [1, 2]   # starting fibonacci numbers
-    total = 2              # starting total (accounting for the 2)
-    while True:            # runs until code stops it from working
-        high_num = fib_numbers[-1] + fib_numbers[-2]
-        if (high_num <= maximum):
-            fib_numbers.append(high_num)
-            if high_num % 2 == 0:
-                total += high_num
-        else:
-            break
-    return total
+import functions
 
 
-result = list_fibonacci_numbers(4000000)
-print(result)
+def main():
+    total = 0
+    result = functions.list_fibonacci_numbers(4000000)
+    for each in result:
+        if each % 2 == 0:
+            total += each
+    print(total)
+
+
+if __name__ == "__main__":
+    main()

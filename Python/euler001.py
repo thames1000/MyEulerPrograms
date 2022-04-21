@@ -9,18 +9,13 @@
 # we get 3, 5, 6 and 9. The sum of these multiples is 23.                   #
 # Find the sum of all the multiples of 3 or 5 below 1000.                   #
 #############################################################################
-
-def sum_of_multiples(max):
-    # Finds the multiples of 3 or 5, below the variable 'max'
-    # and adds them together to return variable 'total'
-    total = 0
-    for number in range(max):
-        if number % 3 == 0:  # multiple of 3
-            total += number
-        elif number % 5 == 0:  # multiple of 5
-            total += number
-    return total
+import functions
 
 
-answer = sum_of_multiples(1000)
-print(answer)
+def main():
+    answer = functions.check_multiples(1000, 3, 5)
+    print(sum(answer))
+
+
+if __name__ == "__main__":
+    main()
