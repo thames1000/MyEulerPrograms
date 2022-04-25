@@ -73,6 +73,15 @@ def palindrome_check(string_value):
     return result
 
 
+def num_checker(number, maximum):
+    """checks if 'number' is divisible by all numbers from 1 to 'maximum'"""
+    results = True
+    for i in range(1, maximum+1):
+        if number % i != 0:
+            results = False
+    return results
+
+
 if __name__ == "__main__":
     """
     Space for testing
