@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-##############################################################################
-# Program by: James Lambert                                                  #
-# Date Updated: 20220419                                                     #
-##############################################################################
-# A palindromic number reads the same both ways. The largest palindrome      #
-# made from the product of two 2-digit numbers is 9009 = 91 × 99.            #
-#                                                                            #
-# Find the largest palindrome made from the product of two 3-digit numbers.  #
-##############################################################################
+"""
+Euler Problem 4: Largest Palindrom Product
+
+Code by: James Lambert
+Date Updated: 20220419
+
+A palindromic number reads the same both ways. The largest palindrome
+made from the product of two 2-digit numbers is 9009 = 91 * 99.
+
+Find the largest palindrome made from the product of two 3-digit numbers.
+"""
 import functions
 
 
@@ -29,9 +31,4 @@ def determine_max_palindrome(minimum, maximum):
     return max(numbers)
 
 
-def main():
-    print(determine_max_palindrome(100, 999))
-
-
-if __name__ == "__main__":
-    main()
+print(determine_max_palindrome(100, 999))
