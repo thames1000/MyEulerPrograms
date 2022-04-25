@@ -83,8 +83,6 @@ def num_checker(number, maximum):
 
 
 if __name__ == "__main__":
-    """
-    Space for testing
-    """
+    """Space for testing"""
     results = check_multiples(1000, 3, 5)
     print(sum(results))
