@@ -1,3 +1,10 @@
+"""
+A collection of functions utilized by Euler Problems that can be reused by
+multple files
+
+Code By: James Lambert
+"""
+
 
 def check_multiples(max, *nums):
     """
@@ -80,6 +87,21 @@ def num_checker(number, maximum):
         if number % i != 0:
             results = False
     return results
+
+
+def sum_of_squares(maximum):
+    """Determines the sum of squares of numbers below 'maximum'"""
+    total = 0
+    for number in range(maximum+1):
+        total += (number ** 2)
+    return total
+
+
+def square_of_sum(maximum):
+    """Determines the square of the sum of numbers below 'maximum'"""
+    sumtotal = sum(range(maximum+1))
+    total = sumtotal ** 2
+    return total
 
 
 if __name__ == "__main__":
