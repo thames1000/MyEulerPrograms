@@ -23,3 +23,22 @@ int sum_of_divisible(int low_num, int high_num, int divisor1, int divisor2)
     }
     return total;
 }
+
+int even_fibonnacci_sum (int max_num)
+{
+    int total = 2;
+    int prior = 1;
+    int current = 2;
+    int temp = 0;
+    while (current<max_num)
+    {
+        temp = current;
+        current+=prior;
+        prior=temp;
+        if (current%2==0)
+        {
+            total+=current;
+        }
+    }
+    return total;
+}
