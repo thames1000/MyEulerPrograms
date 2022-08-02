@@ -104,3 +104,48 @@ uint64_t prime_factors(uint64_t number)
     }
     return answer;
 }
+
+
+static uint32_t quick_pow10(uint32_t n)
+{
+    static uint32_t pow10[10] = {
+        1, 10, 100, 1000, 10000, 
+        100000, 1000000, 10000000, 100000000, 1000000000
+    };
+
+    return pow10[n]; 
+}
+
+static uint32_t palindrome_check(uint32_t number)
+{
+    uint32_t compare1 = 0;
+    uint32_t compare2 = 0;
+    uint32_t palindrome = 0;
+    uint32_t size = log10(number)+1;
+    for (uint32_t i = 1; i < (size/2)+1; i++)
+    {
+        compare1 = (number/(quick_pow10(size-i))) % 10;
+        compare2 = (number % (quick_pow10(i))) / (quick_pow10(i-1));
+        if (compare1!=compare2)
+        {
+            palindrome = 1;
+            break;
+        }
+    }
+    return (palindrome);
+}
+
+uint32_t palindrome_product(uint32_t maximum)
+{
+    for (uint32_t i = maximum; i > (maximum - (maximum / 10)); i-- )
+    {
+        for (uint32_t j = maximum; j > (maximum - (maximum / 10)); j--)
+        {
+            if (0 == palindrome_check(i * j))
+            {
+                return i*j;
+            }
+        }
+    }
+    return 0;
+}

@@ -6,7 +6,7 @@ CFLAGS += -I ./C/include/
 CHECKLIBS = -lcheck -lm -lrt -lpthread -lsubunit
 
 .PHONY: all
-all: 001 002 003
+all: 001 002 003 004
 
 FILES = C/include/functions.c
 .PHONY: 001
@@ -20,6 +20,10 @@ FILES = C/include/functions.c
 .PHONY: 003
 003:
 	$(CC) $(CFLAGS) $(FILES) C/problem003.c $(CHECKLIBS) -o C_Executables/exe003
+
+.PHONY: 004
+004:
+	$(CC) $(CFLAGS) $(FILES) C/problem004.c $(CHECKLIBS) -o C_Executables/exe004
 
 .PHONY: clean
 clean:
