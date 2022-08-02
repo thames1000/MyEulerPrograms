@@ -1,7 +1,7 @@
+#include <math.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
-#include <math.h>
 
 #include <functions.h>
 
@@ -14,6 +14,6 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 int main(void)
 {
     uint32_t number = palindrome_product(999);
-    printf("Largest Prime Factor is %u\n",number);
+    printf("Largest Prime Factor is %u\n", number);
     return 0;
 }

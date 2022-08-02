@@ -1,7 +1,7 @@
+#include <math.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
-#include <math.h>
 
 #include <functions.h>
 
@@ -13,6 +13,6 @@ What is the largest prime factor of the number 600851475143 ?
 int main(void)
 {
     uint64_t number = prime_factors(600851475143);
-    printf("Largest Prime Factor is %lu\n",number);
+    printf("Largest Prime Factor is %lu\n", number);
     return 0;
 }
