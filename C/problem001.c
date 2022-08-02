@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <stdint.h>
 
-#include "../include/functions.h"
+#include <functions.h>
 
 /*
 If we list all the natural numbers below 10 that are multiples of 3 or 5, 
@@ -10,7 +11,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 */
 int main(void)
 {
-    int answer;
+    uint32_t answer;
     answer = sum_of_divisible(1,1000,3,5);
     printf("%d\n",answer);
     return 0;
